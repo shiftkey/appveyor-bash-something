@@ -1,5 +1,5 @@
 environment:
-  WORLD_VARIABLE: world
+  PLATFORM: win32
 
 build_script:
   - bash script\build.sh
