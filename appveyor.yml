@@ -1,0 +1,5 @@
+environment:
+  WORLD: world
+
+build_script:
+  - bash script\build.sh
