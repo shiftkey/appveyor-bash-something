@@ -1,5 +1,5 @@
 environment:
-  WORLD: world
+  WORLD_VARIABLE: world
 
 build_script:
   - bash script\build.sh

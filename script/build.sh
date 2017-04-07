@@ -1,1 +1,1 @@
-echo "Hello $WORLD!"
+echo "Hello $WORLD_VARIABLE!"
