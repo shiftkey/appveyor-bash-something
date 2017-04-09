@@ -3,4 +3,4 @@ environment:
 
 build_script:
   - cmd: SET
-  - cmd: PLATFORM=win32 bash script\build.sh
+  - cmd: bash script\build.sh
