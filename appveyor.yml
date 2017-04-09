@@ -2,5 +2,5 @@ environment:
   PLATFORM: win32
 
 build_script:
-  - bash env
+- '%CYG_ROOT%/bin/bash -lc "printenv"'
   - bash script\build.sh
