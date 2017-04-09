@@ -2,5 +2,5 @@ environment:
   PLATFORM: win32
 
 build_script:
-  - bash printenv
+  - bash env
   - bash script\build.sh
