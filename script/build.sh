@@ -1,11 +1,11 @@
 
-if [ "$PLATFORM" == "ubuntu" ]; then
+if [ "$TARGET_PLATFORM" == "ubuntu" ]; then
   echo "Building Git for Ubuntu"
-elif [ "$PLATFORM" == "macOS" ]; then
+elif [ "$TARGET_PLATFORM" == "macOS" ]; then
   echo "Building Git for macOS"
-elif [ "$PLATFORM" == "win32" ]; then
+elif [ "$TARGET_PLATFORM" == "win32" ]; then
   echo "Building Git for Windows"
 else
-  echo "Unable to build Git for platform $PLATFORM"
+  echo "Unable to build Git for platform $TARGET_PLATFORM"
   exit 1
 fi

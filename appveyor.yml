@@ -1,6 +1,6 @@
 environment:
-  PLATFORM: win32
+  TARGET_PLATFORM: win32
 
 build_script:
   - cmd: SET
-  - cmd: bash script\build.sh
+  - cmd: PLATFORM=win32 bash script\build.sh
