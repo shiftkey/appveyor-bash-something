@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "eslint": "ts-node script/eslint.ts",
     "eslint-check": "eslint --print-config .eslintrc.* | eslint-config-prettier-check"
   },
   "repository": {
@@ -17,6 +18,18 @@
   },
   "homepage": "https://github.com/shiftkey/appveyor-bash-something#readme",
   "dependencies": {
-    "eslint": "^4.5.0"
+    "eslint": "^4.5.0",
+    "eslint-config-prettier": "^2.3.0",
+    "eslint-plugin-babel": "^4.1.2",
+    "eslint-plugin-prettier": "^2.2.0",
+    "eslint-plugin-react": "^7.2.1",
+    "eslint-plugin-typescript": "^0.5.0",
+    "prettier": "^1.5.3",
+    "ts-node": "^3.3.0",
+    "typescript": "^2.4.2",
+    "typescript-eslint-parser": "^6.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^8.0.24"
   }
 }
