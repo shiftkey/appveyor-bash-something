@@ -1,0 +1,22 @@
+{
+  "name": "appveyor-bash-something",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "eslint-check": "eslint --print-config .eslintrc.* | eslint-config-prettier-check"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shiftkey/appveyor-bash-something.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shiftkey/appveyor-bash-something/issues"
+  },
+  "homepage": "https://github.com/shiftkey/appveyor-bash-something#readme",
+  "dependencies": {
+    "eslint": "^4.5.0"
+  }
+}

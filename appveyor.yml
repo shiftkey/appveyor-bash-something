@@ -1,6 +1,13 @@
 environment:
-  TARGET_PLATFORM: win32
+   nodejs_version: "7"
+
+install:
+  - ps: Install-Product node $env:nodejs_version $env:platform
+  - npm install -g npm@4.6.1
+  - npm install
+  - ls -a node_modules/.bin
+  - npm ls --depth 0
+  - npm bin
 
 build_script:
-  - cmd: SET
-  - cmd: bash script\build.sh
+  - npm run eslint-check
