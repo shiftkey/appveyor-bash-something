@@ -11,42 +11,38 @@ const ESLINT_ARGS = [
   './app/{src,typings,test}/**/*.{j,t}s?(x)',
   ...process.argv.slice(2),
 ]
-const opts = {
-  stdio: 'inherit',
-}
 
 if (process.env.CI) {
-  const cp = ChildProcess.spawn(
+  const child_process = ChildProcess.spawn(
     Path.resolve(__dirname, '..', 'node_modules', '.bin', 'eslint'),
-    ESLINT_ARGS,
-    opts
+    ESLINT_ARGS
   )
 
   const stdout = new Array<Buffer>()
-  cp.stdout.on('data', chunk => {
+  child_process.stdout.on('data', chunk => {
     stdout.push(chunk as Buffer)
   })
 
   const stderr = new Array<Buffer>()
-  cp.stderr.on('data', chunk => {
+  child_process.stderr.on('data', chunk => {
     stderr.push(chunk as Buffer)
   })
 
-  cp.stdout.once('close', () => {
+  child_process.stdout.once('close', () => {
     const output = Buffer.concat(stdout)
     console.log(`output: '${output}'`)
   })
 
-  cp.stderr.once('close', () => {
+  child_process.stderr.once('close', () => {
     const error = Buffer.concat(stderr)
     console.log(`error: '${error}'`)
   })
 
-  cp.on('error', err => {
+  child_process.on('error', err => {
     console.log(`error raised: ${err}`)
   })
 
-  cp.on('exit', (code, signal) => {
+  child_process.on('exit', (code, signal) => {
     console.log(`exit with code: ${code}`)
   })
 
