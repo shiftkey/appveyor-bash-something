@@ -13,8 +13,16 @@ const ESLINT_ARGS = [
 ]
 
 if (process.env.CI) {
+  const file = process.platform === 'win32'
+    ? 'eslint.cmd'
+    : 'eslint'
+
+  const path = Path.resolve(__dirname, '..', 'node_modules', '.bin', file)
+
+  console.log(`spawning ${path}`)
+
   const child_process = ChildProcess.spawn(
-    Path.resolve(__dirname, '..', 'node_modules', '.bin', 'eslint'),
+    path,
     ESLINT_ARGS
   )
 
