@@ -16,3 +16,4 @@ install:
 
 build_script:
   - npm run eslint-check
+  - npm run eslint
